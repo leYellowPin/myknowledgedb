@@ -77,11 +77,10 @@ body{
 	);
 }
 .logo {
-  display: inline;
-  margin: auto;
+  margin:0 auto;
   padding: 5px 0px;
   max-height: var(--ribbon-height);
-  max-width: 50%;
+  max-width: 100%;
   clear: both;
   filter: drop-shadow(0px 0px 1px white);
 }
@@ -89,10 +88,17 @@ body{
 .content{
 	border: 4px double var(--highlight2);
 	border-radius: 8px;
+	margin:0 auto;
 }
 .content h1{
 	color: white;
 	font-size: 48px;
+	text-align:center;
+	filter: drop-shadow(0px 0px 1px white);
+}
+.content h2{
+	color: white;
+	font-size: 32px;
 	text-align:center;
 	filter: drop-shadow(0px 0px 1px white);
 }

@@ -134,7 +134,7 @@ body{
 	display: none;
 }
 
-.dropbtn{
+.dropdown .dropbtn{
 	height: var(--ribbon-height);
 	border-radius: 8px;
 	border: 1.5px solid var(--highlight1);
@@ -142,7 +142,7 @@ body{
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.dropdown .dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: var(--bg); 

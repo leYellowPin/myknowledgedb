@@ -5,9 +5,9 @@
 	--highlight1: #ABC0E4;
 	--highlight2: #1C3158;
 	--bg: #13223D;
-	--ribbon-height: 5vw;
-	--ribbon-outline-height: 5.1vw;
-	--doc-margin-hor: 6.667vw;
+	--ribbon-height: 70px;
+	--ribbon-outline-height: 72px;
+	--doc-margin-hor: 128px;
 }
 
 body{
@@ -15,7 +15,7 @@ body{
 }
 
 .ribbon_top{
-	margin: 1vw;
+	margin: 10px;
 	width: device-width;
 	height: var(--ribbon-outline-height);
 	background: linear-gradient(
@@ -24,47 +24,43 @@ body{
 	#ABC0E4, 
 	var(--gradient-bottom)
 	);
-	border-radius: 2vw;
+	border-radius: 15px;
 }
 .ribbon_content_top li{
 	list-style-type: none;
 	float: right;
 	display: inline;
-	padding: 1vw .9vw;
-
+	margin-top: auto;
+	margin-bottom: auto;
 }
-.ribbon_content_nav{
-	height: 3vw;
-	width: 3vw;
-}
-.ribbon_content_top li a{
+.ribbon_content_top li .ribbon_top_btn_link{
 	list-style-type: none;
 	float: right;
 	display: inline;
 	transition-duration: .5s;
-	border-radius: 50%;
+	border-radius: 8px;
 }
-.ribbon_content_top li a:hover{
+
+.ribbon_content_top li .ribbon_top_btn_link:hover{
 	list-style-type: none;
 	float: right;
 	display: inline;
 	background-color: var(--highlight2);
 	transition-duration: .5s;
-	border-radius: 50%;
+	border-radius: 8px;
 }
 
-/* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 640px) {
-	.content-button button{
-		display: block;
-		margin-left: 50%;
-	}
+.ribbon_content_nav{
+	padding: 15px 10px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
+
 .ribbon_field_top{
-	margin: .2vw;
+	margin: 2px;
 	width: device-width;
 	height: var(--ribbon-height);
-	border-radius: 2vw;
+	border-radius: 15px;
 	background-image: linear-gradient(
 	to right, 
 	var(--gradient-top), 
@@ -82,27 +78,27 @@ body{
 }
 .logo {
   display: inline;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 6vw;
-  width: 27vw;
+  margin: auto;
+  padding: 5px 0px;
+  max-height: var(--ribbon-height);
+  max-width: 50%;
   clear: both;
   filter: drop-shadow(0px 0px 1px white);
 }
 
 .content{
-	border: .5vw double var(--highlight2);
-	border-radius: .2vw;
+	border: 4px double var(--highlight2);
+	border-radius: 8px;
 }
 .content h1{
 	color: white;
-	font-size: 3vw;
+	font-size: 48px;
 	text-align:center;
 	filter: drop-shadow(0px 0px 1px white);
 }
 .content p{
 	color: white;
-	font-size: 1.5vw;
+	font-size: 14px;
 	margin-left: var(--doc-margin-hor);
 	margin-right: var(--doc-margin-hor);
 	filter: drop-shadow(0px 0px 1px white);
@@ -112,15 +108,14 @@ body{
 .content-button li{
 	list-style-type: none;
 	display: inline;
-	margin-left: 2vw;
+	margin: 25px;
 }
 .content-button button{
-	width: 12vw;
-	height: 5vw;
-	font-size: 1.5vw;
+	width: 96px;
+	height: 32px;
 	background-color: var(--bg); 
 	color: white; 
-	border: .2vw solid var(--highlight1);
+	border: 2px solid var(--highlight1);
 	transition-duration: .5s;
 }
 .content-button .btn-disabled{
@@ -134,5 +129,53 @@ body{
 	transition-duration: .5s;
 }
 
+.dropdown{
+	position: relative;
+	display: none;
+}
 
+.dropbtn{
+	height: var(--ribbon-height);
+	border-radius: 8px;
+	border: 1.5px solid var(--highlight1);
+	background-color: var(--bg); 
+}
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--bg); 
+	border: 2px solid var(--highlight1);
+	border-radius: 8px;
+	right: 0;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content .drop-content-btn{
+	border: none;
+	border-radius: 8px;
+	color: white;
+	min-width: 160px;
+	background-color: var(--bg); 
+	text-align: right;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 640px) {
+	.ribbon_content_nav{
+		display: none;
+	}
+	.dropdown{
+		display: inline;
+	}
+	.content-button button{
+		display: block;
+		margin: auto;
+	}
+}

@@ -1,0 +1,129 @@
+:root{
+	--gradient-top: #182B4C;
+	--gradient-mid: #162746;
+	--gradient-bottom: #13223D;
+	--highlight1: #ABC0E4;
+	--highlight2: #1C3158;
+	--bg: #13223D;
+	--ribbon-height: 70px;
+	--ribbon-outline-height: 72px;
+	--doc-margin-hor: 128px;
+}
+
+body{
+	background-color: var(--bg);
+}
+
+.ribbon_top{
+	margin: 10px;
+	width: device-width;
+	height: var(--ribbon-outline-height);
+	background: linear-gradient(
+	to right, 
+	#CDD9EF, 
+	#ABC0E4, 
+	var(--gradient-bottom)
+	);
+	border-radius: 15px;
+}
+.ribbon_content_top li{
+	list-style-type: none;
+	float: right;
+	display: inline;
+	padding: 15px 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.ribbon_content_top li a{
+	list-style-type: none;
+	float: right;
+	display: inline;
+	transition-duration: .5s;
+	border-radius: 50%;
+}
+
+.ribbon_content_top li a:hover{
+	list-style-type: none;
+	float: right;
+	display: inline;
+	background-color: var(--highlight2);
+	transition-duration: .5s;
+	border-radius: 50%;
+}
+
+.ribbon_field_top{
+	margin: 2px;
+	width: device-width;
+	height: var(--ribbon-height);
+	border-radius: 15px;
+	background-image: linear-gradient(
+	to right, 
+	var(--gradient-top), 
+	var(--gradient-mid), 
+	var(--gradient-bottom)
+	);
+}
+.ribbon_field_top:hover{
+	background-image: linear-gradient(
+	to right, 
+	var(--gradient-top), 
+	var(--gradient-top), 
+	var(--gradient-bottom)
+	);
+}
+.logo {
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px 0px;
+  max-height: var(--ribbon-height);
+  max-width: 100%;
+  clear: both;
+  filter: drop-shadow(0px 0px 1px white);
+}
+
+.content{
+	border: 4px double var(--highlight2);
+	border-radius: 8px;
+}
+.content h1{
+	color: white;
+	font-size: 48px;
+	text-align:center;
+	filter: drop-shadow(0px 0px 1px white);
+}
+.content p{
+	color: white;
+	font-size: 14px;
+	margin-left: var(--doc-margin-hor);
+	margin-right: var(--doc-margin-hor);
+	filter: drop-shadow(0px 0px 1px white);
+}
+
+
+.content-button li{
+	list-style-type: none;
+	display: inline;
+	margin: 25px;
+}
+.content-button button{
+	width: 96px;
+	height: 32px;
+	background-color: var(--bg); 
+	color: white; 
+	border: 2px solid var(--highlight1);
+	transition-duration: .5s;
+}
+.content-button .btn-disabled{
+	opacity: .5;
+	cursor: not-allowed;
+}
+
+.content-button button:hover{
+	list-style-type: none;
+	background-color: var(--highlight2);
+	transition-duration: .5s;
+}
+
+
+

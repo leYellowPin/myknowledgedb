@@ -5,9 +5,9 @@
 	--highlight1: #ABC0E4;
 	--highlight2: #1C3158;
 	--bg: #13223D;
-	--ribbon-height: 70px;
-	--ribbon-outline-height: 72px;
-	--doc-margin-hor: 128px;
+	--ribbon-height: 5vw;
+	--ribbon-outline-height: 5.1vw;
+	--doc-margin-hor: 6.667vw;
 }
 
 body{
@@ -15,7 +15,7 @@ body{
 }
 
 .ribbon_top{
-	margin: 10px;
+	margin: 1vw;
 	width: device-width;
 	height: var(--ribbon-outline-height);
 	background: linear-gradient(
@@ -24,15 +24,18 @@ body{
 	#ABC0E4, 
 	var(--gradient-bottom)
 	);
-	border-radius: 15px;
+	border-radius: 2vw;
 }
 .ribbon_content_top li{
 	list-style-type: none;
 	float: right;
 	display: inline;
-	padding: 15px 10px;
-	margin-top: auto;
-	margin-bottom: auto;
+	padding: 1vw .9vw;
+
+}
+.ribbon_content_nav{
+	height: 3vw;
+	width: 3vw;
 }
 .ribbon_content_top li a{
 	list-style-type: none;
@@ -41,7 +44,6 @@ body{
 	transition-duration: .5s;
 	border-radius: 50%;
 }
-
 .ribbon_content_top li a:hover{
 	list-style-type: none;
 	float: right;
@@ -51,11 +53,19 @@ body{
 	border-radius: 50%;
 }
 
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 640px) {
+	.content-button button{
+		display: block;
+		margin-left: 50%;
+	}
+}
+
 .ribbon_field_top{
-	margin: 2px;
+	margin: .2vw;
 	width: device-width;
 	height: var(--ribbon-height);
-	border-radius: 15px;
+	border-radius: 2vw;
 	background-image: linear-gradient(
 	to right, 
 	var(--gradient-top), 
@@ -75,26 +85,25 @@ body{
   display: inline;
   margin-top: auto;
   margin-bottom: auto;
-  padding: 5px 0px;
-  max-height: var(--ribbon-height);
-  max-width: 100%;
+  height: 6vw;
+  width: 27vw;
   clear: both;
   filter: drop-shadow(0px 0px 1px white);
 }
 
 .content{
-	border: 4px double var(--highlight2);
-	border-radius: 8px;
+	border: .5vw double var(--highlight2);
+	border-radius: .2vw;
 }
 .content h1{
 	color: white;
-	font-size: 48px;
+	font-size: 3vw;
 	text-align:center;
 	filter: drop-shadow(0px 0px 1px white);
 }
 .content p{
 	color: white;
-	font-size: 14px;
+	font-size: 1.5vw;
 	margin-left: var(--doc-margin-hor);
 	margin-right: var(--doc-margin-hor);
 	filter: drop-shadow(0px 0px 1px white);
@@ -104,14 +113,15 @@ body{
 .content-button li{
 	list-style-type: none;
 	display: inline;
-	margin: 25px;
+	margin-left: 2vw;
 }
 .content-button button{
-	width: 96px;
-	height: 32px;
+	width: 12vw;
+	height: 5vw;
+	font-size: 1.5vw;
 	background-color: var(--bg); 
 	color: white; 
-	border: 2px solid var(--highlight1);
+	border: .2vw solid var(--highlight1);
 	transition-duration: .5s;
 }
 .content-button .btn-disabled{

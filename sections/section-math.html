@@ -13,14 +13,14 @@
 		<div class="ribbon_field_top">
 			<ul class="ribbon_content_top">
 				<img src="assets/logo.png"; class="logo"; ></img>
-				<li> <a href="#HOME"; class="ribbon_top_btn_link"> <img src="assets/home_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="index.html"; class="ribbon_top_btn_link"> <img src="assets/home_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
 				<li> <a href="#DOCUMENT"; class="ribbon_top_btn_link"> <img src="assets/document_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
 				<li> <a href="#INFO"; class="ribbon_top_btn_link"> <img src="assets/info_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
 				<li>
 				<div class="dropdown">
 					<button class="dropbtn"> <img src="assets/more_btn.svg";></img> </button>
 					<div class="dropdown-content">
-						<a href="#">
+						<a href="index.html">
 						<button class="drop-content-btn">
 							Home <img src="assets/home_btn.svg";></img>
 						</button>
@@ -44,67 +44,21 @@
 		</div>
 	</div>
 	
-	<div class="content">
+	<div class="content" style="text-align: center;">>
 		<h1>
-			MyKnowledgeDB
+			Toán 11
 		</h1>
 		<p style="text-align: center;">
-			A place where I share things I learned.
-			<br>
-			A place where I keep track of my progress in various fields over the year.
-			<br>
-			A place where I archive things that I found helpful, and for the future me to revisit it if interested.
-			<br>
+			PDF copy of the book:
 		</p>
-	</div>
-	<br>
-	<div class="content"; style="text-align:center;">
-		<h2>
-			Why in the form of a website?
-		</h2>
-		<p style="text-align: center;">
-			Honestly I just want to flex my coding skills lol.
-		</p>
-	</div>
-	<br>
-	<div class="content"; style="text-align:center;">
-		<h2>
-			Things I've learned:
-		</h2>
-		<ul class="content-button" style="text-align:center;">
-			<li>
-				<a href="sections/section-math.html">
-				<button>
-					TOÁN 11
-				</button>
-				</a>
-			</li>
-			<li>
-				<button>
-					VẬT LÝ 11
-				</button>
-			</li>
-			<li>
-				<button class="btn-disabled">
-					HÓA HỌC 11
-				</button>
-			</li>
-			<li>
-				<button class="btn-disabled">
-					GML
-				</button>
-			</li>
-			<li>
-				<button class="btn-disabled">
-					HTML
-				</button>
-			</li>
-			<li>
-				<button class="btn-disabled">
-					CSS
-				</button>
-			</li>
-		</ul>
+		<div class="content-button";>
+			<button onclick=toggleBook()>
+				Show PDF
+			</button>
+		</div>
+		<object data="pdf/toan-11.pdf" type="application/pdf" width="50%" height="500px" style="display:none; margin:0 auto;" id="book">
+			<p>Unable to display PDF file. <a href="pdf/toan-11.pdf">Download</a> instead.</p>
+		</object>
 	</div>
 	<br>
 	<div class="content";>
@@ -112,6 +66,13 @@
 			My socials:
 		</p>
 	</div>
+	
+	<script>
+		function toggleBook(){
+			document.getElementById('book').style.display='block'
+		}
+	</script>
+	
 </body>
 
 </html>

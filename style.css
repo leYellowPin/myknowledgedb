@@ -41,12 +41,12 @@ body{
 	border-radius: 8px;
 }
 
-.ribbon_content_top li .ribbon_top_btn_link:hover{
+.ribbon_content_top li .ribbon_top_btn_link:active{
 	list-style-type: none;
 	float: right;
 	display: inline;
 	background-color: var(--highlight2);
-	transition-duration: .5s;
+	transition-duration: .2s;
 	border-radius: 8px;
 }
 
@@ -68,7 +68,7 @@ body{
 	var(--gradient-bottom)
 	);
 }
-.ribbon_field_top:hover{
+.ribbon_field_top:active{
 	background-image: linear-gradient(
 	to right, 
 	var(--gradient-top), 
@@ -77,12 +77,19 @@ body{
 	);
 }
 .logo {
-  margin:0 auto;
-  padding: 5px 0px;
-  max-height: var(--ribbon-height);
-  max-width: 100%;
-  clear: both;
-  filter: drop-shadow(0px 0px 1px white);
+	margin:0 auto;
+	padding: 5px 0px;
+	max-height: var(--ribbon-height);
+	max-width: 100%;
+	clear: both;
+	filter: drop-shadow(0px 0px 1px white);
+	user-drag: none;
+	draggable: false;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .content{
@@ -130,10 +137,10 @@ body{
 	cursor: not-allowed;
 }
 
-.content-button button:hover{
+.content-button button:active{
 	list-style-position: outside;
 	background-color: var(--highlight2);
-	transition-duration: .5s;
+	transition-duration: .2s;
 }
 
 .dropdown{

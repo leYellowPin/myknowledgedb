@@ -29,6 +29,7 @@ body{
 	position: fixed;
 	margin-left: auto;
 	z-index: 1;
+	padding: 0px;
 	top:0;
 }
 .ribbon_content_top li{

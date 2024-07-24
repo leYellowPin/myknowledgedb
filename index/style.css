@@ -10,9 +10,18 @@
 	--doc-margin-hor: 2vw;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 body{
-	margin-top: 96px;
+	margin: 0;
+	min-height: 100vh;
+	box-sizing: border-box;
 	background-color: var(--bg);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: minmax(0,1fr);
 }
 
 .ribbon_top{
@@ -39,7 +48,7 @@ body{
 	margin-top: auto;
 	margin-bottom: auto;
 }
-.ribbon_content_top li .ribbon_top_btn_link{
+.ribbon_content_top li .ribbon_top_button_link{
 	list-style-type: none;
 	float: right;
 	display: inline;
@@ -47,7 +56,7 @@ body{
 	border-radius: 15px;
 }
 
-.ribbon_content_top li .ribbon_top_btn_link:active{
+.ribbon_content_top li .ribbon_top_button_link:active{
 	list-style-type: none;
 	float: right;
 	display: inline;
@@ -104,6 +113,8 @@ body{
 	border: 4px double var(--highlight2);
 	border-radius: 8px;
 	margin:0 auto;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 .content h1{
 	color: white;
@@ -145,7 +156,7 @@ body{
 	transition-duration: .5s;
 	cursor: pointer;
 }
-.content-button .btn-disabled{
+.content-button .button-disabled{
 	opacity: .5;
 	cursor: not-allowed;
 }
@@ -161,7 +172,7 @@ body{
 	display: none;
 }
 
-.dropdown .dropbtn{
+.dropdown .dropbutton{
 	height: var(--ribbon-height);
 	border-radius: 8px;
 	border: 1.5px solid var(--highlight1);
@@ -181,7 +192,7 @@ body{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
-.dropdown-content .drop-content-btn{
+.dropdown-content .drop-content-button{
 	border: none;
 	border-radius: 8px;
 	color: white;
@@ -190,7 +201,7 @@ body{
 	transition-duration: .5s;
 	text-align: right;
 }
-.drop-content-btn:active{
+.drop-content-button:active{
 	background-color: var(--highlight2);
 	transition-duration: .2s;
 }
@@ -198,10 +209,60 @@ body{
 .dropdown:hover .dropdown-content {
 	display: block;
 }
-.dropbtn:hover{
+.dropbutton:hover{
 	background-color: var(--highlight2);
 	transition-duration: .2s;
 }
+
+
+footer{
+	color: white;
+	min-height: 80px;
+	padding: 20px 0px 20px;
+	width: 100%;
+	clear: both;
+	background: rgba(0,0,0,0.25);
+}
+.bottom_footer{
+	color: white;
+	min-height: 10px;
+	padding: 10px 0px;
+	text-align: center;
+	width: 100%;
+	clear: both;
+	background: rgba(0,0,0,0.3);
+}
+.social_icon{
+	display: flex;
+	justify-content: center;
+}
+.social_icon a{
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	background-color: var(--bg);
+	margin: 15px;
+	border-radius: 50%;
+	transition-duration: .5s;
+}
+.social_icon a i{
+	font-size: 30px;
+	width: 30px;
+	color: white;
+	opacity: .9;
+	transition-duration: .5s;
+}
+.social_icon a:hover i{
+	color: var(--bg);
+	opacity: 1;
+	transition-duration: .2s;
+}
+.social_icon a:hover{
+	background-color: white;
+	transition-duration: .2s;
+}
+
+
 
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 640px) {

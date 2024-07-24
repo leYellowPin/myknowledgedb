@@ -4,36 +4,37 @@
 <head>
 	<title>MyKnowledgeDB</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="ribbon_top"; style="position: fixed; margin-left: auto; z-index: 1">
+	<header class="ribbon_top">
 		<div class="ribbon_field_top">
 			<ul class="ribbon_content_top">
 				<img src="assets/logo.png"; class="logo"; ></img>
-				<li> <a href="../index.html"; class="ribbon_top_btn_link"> <img src="assets/home_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
-				<li> <a href="#DOCUMENT"; class="ribbon_top_btn_link"> <img src="assets/document_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
-				<li> <a href="#INFO"; class="ribbon_top_btn_link" style="cursor: help;"> <img src="assets/info_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="../index.html"; class="ribbon_top_button_link"> <img src="assets/home_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="#DOCUMENT"; class="ribbon_top_button_link"> <img src="assets/document_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="#INFO"; class="ribbon_top_button_link" style="cursor: help;"> <img src="assets/info_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
 				<li>
 				<div class="dropdown">
-					<button class="dropbtn"> <img src="assets/more_btn.svg";></img> </button>
+					<button class="dropbutton"> <img src="assets/more_btn.svg";></img> </button>
 					<div class="dropdown-content">
 						<a href="../index.html">
-						<button class="drop-content-btn">
+						<button class="drop-content-button">
 							Home <img src="assets/home_btn.svg";></img>
 						</button>
 						</a>
 						<br>
 						<a href="#">
-						<button class="drop-content-btn">
+						<button class="drop-content-button">
 							Document <img src="assets/document_btn.svg";></img>
 						</button>
 						</a>
 						<br>
 						<a href="#">
-						<button class="drop-content-btn" style="cursor: help;">
+						<button class="drop-content-button" style="cursor: help;">
 							Info <img src="assets/info_btn.svg";></img>
 						</button>
 						</a>
@@ -42,8 +43,8 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-	
+	</header>
+	<br><br><br><br><br>
 	<div class="content" style="text-align: center;">>
 		<h1>
 			Toán 11
@@ -61,15 +62,25 @@
 		</object>
 	</div>
 	<br>
-	<div class="content";>
-		<p>
-			My socials:
-		</p>
+	<footer>
+		<div class="social_icon">
+		<a href="https://youtube.com/@leYellowPin" target="_blank"><i class="fa-brands fa-youtube" style="transform:translate(-1.5px, 0px)"></i></a>
+		<a href="https://discord.com/invite/F4zZvsA" target="_blank"><i class="fa-brands fa-discord" style="transform:translate(-3.5px, 0px)"></i></a>
+		<a href="https://github.com/leYellowPin" target="_blank"><i class="fa-brands fa-github"></i></a>
+		</div>
+	</footer>
+	<div class="bottom_footer">
+		© leYellowPin 2024. All rights reserved.
 	</div>
 	
 	<script>
 		function toggleBook(){
-			document.getElementById('book').style.display='block'
+			var pdf = document.getElementById("book");
+			if (pdf.style.display === "none") {
+				pdf.style.display = "block";
+			} else {
+				pdf.style.display = "none";
+			}
 		}
 	</script>
 	

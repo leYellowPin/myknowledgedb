@@ -14,26 +14,26 @@
 		<div class="ribbon_field_top">
 			<ul class="ribbon_content_top">
 				<img src="index/assets/logo.png"; class="logo"; ></img>
-				<li> <a href="#page-top"; class="ribbon_top_button_link"> <img src="index/assets/home_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
-				<li> <a href="#DOCUMENT"; class="ribbon_top_button_link"> <img src="index/assets/document_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
-				<li> <a href="#INFO"; class="ribbon_top_button_link" style="cursor: help;"> <img src="index/assets/info_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="#page-top"; title="Home"; class="ribbon_top_button_link"> <img src="index/assets/home_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="#DOCUMENTS"; title="Documents"; class="ribbon_top_button_link"> <img src="index/assets/document_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
+				<li> <a href="#INFO"; title="Info"; class="ribbon_top_button_link" style="cursor: help;"> <img src="index/assets/info_btn.svg"; class="ribbon_content_nav"></img> </a> </li>
 				<li>
 				<div class="dropdown">
 					<button class="dropbutton"> <img src="index/assets/more_btn.svg";></img> </button>
 					<div class="dropdown-content">
-						<a href="#page-top">
+						<a href="#page-top"; title="Home">
 						<button class="drop-content-button">
 							Home <img src="index/assets/home_btn.svg";></img>
 						</button>
 						</a>
 						<br>
-						<a href="#">
+						<a href="#"; title="Documents">
 						<button class="drop-content-button">
-							Document <img src="index/assets/document_btn.svg";></img>
+							Documents <img src="index/assets/document_btn.svg";></img>
 						</button>
 						</a>
 						<br>
-						<a href="#">
+						<a href="#"; title="Info">
 						<button class="drop-content-button" style="cursor: help;">
 							Info <img src="index/assets/info_btn.svg";></img>
 						</button>
@@ -74,8 +74,8 @@
 			Documents
 		</h2>
 		<ul class="content-button";>
-			<li><a href="index/section-math.html"><button>MATH</button></a></li>
-			<li><button>PHYSICS</button></li>
+			<li><a title="Math" href="index/section-math.html"><button>MATH</button></a></li>
+			<li><button class="button-disabled">PHYSICS</button></li>
 			<li><button class="button-disabled">CHEMISTRY</button></li>
 			<li><button class="button-disabled">GML</button></li>
 			<li><button class="button-disabled">HTML</button></li>

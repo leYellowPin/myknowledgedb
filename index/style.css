@@ -140,11 +140,11 @@ body{
 }	
 
 
-ul.content-button{
+.content ul.content-button{
 	display: inline;
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 }
 .content-button li{
 	list-style-type: none;
